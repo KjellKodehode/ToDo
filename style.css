@@ -1,0 +1,21 @@
+/* GLOBALS */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    /* remove default margin for page */
+    margin: 0 auto;
+
+}
+
+img {
+    /* can help with image issues that may come up */
+    display: block;
+    /* do images do not grow bigger and overflow parents */
+    max-width: 100%;
+}
+
