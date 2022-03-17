@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>ToDo</title>
 </head>
-    <body>
-        <div id="container">
-            <div id="myDIV" class="header">
-                <h2>My To Do List</h2>
-                <input type="text" id="myInput" placeholder="what to do..?">
-                <span onClick="newElement()" class="addBtn">Add</span>
-            </div>
+<body>
+    <div class="container">
+        <div class="container__top">
+            <h2>To Do List</h2>
+            <input type="text">
+            <button id="btn__add" class="btn btn__add">Add To List</button>
+        </div>
 
-            <ul id="myUL">
-                <li>Add stuff to do !</li>
+        <div class="container__bottom">
+            <ul id="list">
             </ul>
         </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
