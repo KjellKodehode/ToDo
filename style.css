@@ -85,6 +85,7 @@ ul li{
 }
 
 /* every second todo item is another color */
+
 ul li:nth-child(odd){
     background:#E6820F;
 }
