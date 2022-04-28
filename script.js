@@ -2,24 +2,44 @@ const input = document.querySelector('input');
 const list = document.querySelector('ul');
 let date = new Date();
 
+// focus on input field
+function focusInput(){
+    let input = document.getElementById("input").focus();
+}
+
+// select input field on page load
+window.onload = focusInput()
+
+// When clicking on the button, create list
 document.querySelector('button').addEventListener('click', () =>{
     addToDo();
 })
 
+// When clicking Enter key, create list
+input.addEventListener("keydown", (e) => {
+    if(e.key !== "Enter") return
+    addToDo();
+})
+
+// Creating the todo list
 function addToDo(){
-    if(!input.value){
+    // if nothing in input alert and focus after ok is clicked
+    if(!input.value || input.value.match(/^ *$/)){
         alert("Enter something to do !")
+        window.confirm = focusInput();
     }else{
         const li = document.createElement('li');
         li.classList.add('flex');
         const toDo = document.createElement('p');
-        toDo.textContent =  "⚙️" + " " + input.value + " <-⌛-> " + date.toDateString();
+        toDo.textContent =  "⚙️" + " " + input.value + " 🕧-> " + date.toDateString();
         li.append(toDo);
         list.append(li);
         addDeleteButton(li);
         input.value="";
+        focusInput();
     }
 }
+
 
 // function addCheckBox(li){
 //     const checkBox = document.createElement("input");
@@ -37,25 +57,3 @@ function addDeleteButton(li){
 
 
 // -----------------------
-
-// function myFunction() {
-//     var x = document.createElement("INPUT");
-//     x.setAttribute("type", "checkbox");
-//     document.body.appendChild(x);
-//   }
-
-
-// let list = document.querySelector('ul');
-// list.addEventListener('click', function(ev){
-//     if(ev.target.tagName === "LI"){
-//         ev.target.classList.toggle("checked");
-//     }
-// })
-
-// Add a "checked" symbol when clicking on a list item
-// let list = document.querySelector("ul");
-// list.addEventListener("click", function(ev) {
-//     if (ev.target.tagName === "LI") {
-//         ev.target.classList.toggle("checked");
-//     }
-// }, false);

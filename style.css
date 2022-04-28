@@ -1,5 +1,4 @@
 /* GLOBALS */
-
 *,
 *::before,
 *::after{
@@ -37,7 +36,6 @@ p{
 }
 
 .container{
-    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -46,10 +44,9 @@ p{
 }
 
 /* STYLE TOP */
-
 .container__top{
     border: 2px solid #121212;
-    background-color:#97a293;
+    background-color:#FF6138;
     color: #121212;
     font-size: 1.3rem;
     min-width: 500px;
@@ -61,22 +58,20 @@ p{
 /* STYLE BOTTOM */
 
 .container__bottom{
-    /* border: 2px solid #121212; */
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
     text-align: center;
 }
 
 /* the todo items */
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+/* style todo items */
 ul li{
-    background:#f2ab50;
     border: 1px solid #121212;
     color: #0A0A0A;
     margin: 0;
@@ -84,14 +79,21 @@ ul li{
     padding: 0 0 2px 0;
 }
 
-/* every second todo item is another color */
-
-ul li:nth-child(odd){
-    background:#E6820F;
+/* Variable colors on todo items */
+ul li:nth-child(4n+1){
+    background:#ffffa7;
+}
+ul li:nth-child(4n+2){
+    background:#c4eda9;
+}
+ul li:nth-child(4n+3){
+    background:#86c49a;
+}
+ul li:nth-child(4n+4){
+    background:#00c6a5;
 }
 
-/* checkbox */
-
+/* NOT IN USE ATM checkbox */
 input[type="checkbox"] {
     margin: 5px 0 0 0;
     filter: invert(10%);
@@ -112,26 +114,3 @@ input[type="checkbox"]:checked{
 }
 
 /* -----------------------------  */
-
-
-
-/* When clicked on, add a background color and strike out text */
-/* ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-  } */
-  
-  /* Add a "checked" mark when clicked on */
-  /* ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-  } */
