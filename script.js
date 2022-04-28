@@ -13,7 +13,7 @@ function addToDo(){
         const li = document.createElement('li');
         li.classList.add('flex');
         const toDo = document.createElement('p');
-        toDo.textContent = addCheckBox(li) + "⚙️" + " " + input.value + " <-⌛-> " + date.toDateString();
+        toDo.textContent =  "⚙️" + " " + input.value + " <-⌛-> " + date.toDateString();
         li.append(toDo);
         list.append(li);
         addDeleteButton(li);
@@ -21,11 +21,11 @@ function addToDo(){
     }
 }
 
-function addCheckBox(li){
-    const checkBox = document.createElement("input");
-    checkBox.setAttribute('type', 'checkbox');
-    li.append(checkBox);
-}
+// function addCheckBox(li){
+//     const checkBox = document.createElement("input");
+//     checkBox.setAttribute('type', 'checkbox');
+//     li.append(checkBox);
+// }
 
 function addDeleteButton(li){
     const deleteButton = document.createElement('button');
