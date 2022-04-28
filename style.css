@@ -104,17 +104,19 @@ input[type="checkbox"] {
     transform: translateY(-0.075em);
   }
 
+/* NOT IN USE ATM */
 input[type="checkbox"]:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
 
+/* NOT IN USE ATM */
 input[type="checkbox"]:checked{
     filter: invert(100%) hue-rotate(80deg) brightness(2);
 }
 
+/* NOT IN USE ATM */
 .checked {
-    /* background-color: #888; */
     color: #888;
     text-decoration: line-through;
   }

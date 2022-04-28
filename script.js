@@ -10,12 +10,12 @@ function focusInput(){
 // select input field on page load
 window.onload = focusInput()
 
-// When clicking on the button, create list
+// When clicking on the Add button, create list
 document.querySelector('button').addEventListener('click', () =>{
     addToDo();
 })
 
-// When clicking Enter key, create list
+// When clicking "Enter" key, create list
 input.addEventListener("keydown", (e) => {
     if(e.key !== "Enter") return
     addToDo();
@@ -23,7 +23,7 @@ input.addEventListener("keydown", (e) => {
 
 // Creating the todo list
 function addToDo(){
-    // if nothing in input alert and focus after ok is clicked
+    // if nothing in input, alert and focus input after ok is clicked
     if(!input.value || input.value.match(/^ *$/)){
         alert("Enter something to do !")
         window.confirm = focusInput();
