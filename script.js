@@ -27,9 +27,10 @@ function addToDo(){
     if(!input.value || input.value.match(/^ *$/)){
         alert("Enter something to do !")
         window.confirm = focusInput();
+    // create the todo list
     }else{
         const li = document.createElement('li');
-        li.classList.add('flex');
+        li.classList.add('lists');
         const toDo = document.createElement('p');
         toDo.textContent =  "⚙️" + " " + input.value + " 🕧-> " + date.toDateString();
         li.append(toDo);
@@ -40,20 +41,13 @@ function addToDo(){
     }
 }
 
-
-// function addCheckBox(li){
-//     const checkBox = document.createElement("input");
-//     checkBox.setAttribute('type', 'checkbox');
-//     li.append(checkBox);
-// }
-
+// creating delete button
 function addDeleteButton(li){
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'remove';
     deleteButton.classList.add('btn', 'btn__delete');
     li.append(deleteButton);
-    deleteButton.addEventListener('click', ()=> deleteButton.parentNode.remove());
+    deleteButton.addEventListener('click', ()=> 
+    deleteButton.parentNode.remove(
+        focusInput()));
 }
-
-
-// -----------------------
